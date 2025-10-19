@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:20:48 by sergio            #+#    #+#             */
-/*   Updated: 2025/10/19 14:28:14 by sergio           ###   ########.fr       */
+/*   Updated: 2025/10/19 22:48:26 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,13 @@
 # define RESET "\033[0m"
 
 # include <iostream>	// std::cout, std::cerr
-# include <string>		// std::string
+# include <string>		// std::string, empty(), length(), c_str()
+# include <cstdlib>		// strtol()
+# include <cerrno>		// errno
+# include <climits>		// INT_MAX, INT_MIN
+# include <iomanip>		// std::setprecision, std::fixed
+# include <cctype>		// isdigit()
+# include <cfloat>		// FLT_MAX, DBL_MAX
 
 class ScalarConverter
 {
@@ -38,17 +44,19 @@ class ScalarConverter
 
 // Funciones de deteccion de tipos.
 bool isCharLit(const std::string& input);
-// bool isIntLiteral(const std::string& input);
-// bool isFloatLiteral(const std::string& input);
-// bool isDoubleLiteral(const std::string& input);
-// bool isPseudoLiteral(const std::string& input);
+bool isIntLit(const std::string& input);
+bool isFloatLit(const std::string& input);
+bool isDoubleLit(const std::string& input);
+// bool isPseudoLit(const std::string& input);
 
 // Funciones de conversión e impresión
 void printFromChar(char c);
-// void printFromInt(int n);
-// void printFromFloat(float f);
-// void printFromDouble(double d);
+void printFromInt(int n);
+void printFromFloat(float f);
+void printFromDouble(double d);
 // void printPseudo(const std::string& literal);
-// void printImpossible();
+
+// Funcion de Fallback
+void fallback();
 
 #endif // SCALARCONVERTER_HPP
