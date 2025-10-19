@@ -6,7 +6,7 @@
 /*   By: sergio <sergio@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 14:20:48 by sergio            #+#    #+#             */
-/*   Updated: 2025/10/19 14:13:15 by sergio           ###   ########.fr       */
+/*   Updated: 2025/10/19 14:28:14 by sergio           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,10 +38,10 @@ class ScalarConverter
 
 // Funciones de deteccion de tipos.
 bool isCharLit(const std::string& input);
-// bool isIntLiteral(const std::string&);
-// bool isFloatLiteral(const std::string&);
-// bool isDoubleLiteral(const std::string&);
-// bool isPseudoLiteral(const std::string&);
+// bool isIntLiteral(const std::string& input);
+// bool isFloatLiteral(const std::string& input);
+// bool isDoubleLiteral(const std::string& input);
+// bool isPseudoLiteral(const std::string& input);
 
 // Funciones de conversión e impresión
 void printFromChar(char c);
